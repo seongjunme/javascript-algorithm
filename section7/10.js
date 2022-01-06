@@ -2,6 +2,7 @@ const solution = (arr, target) => {
   const nums = [...arr].sort((a, b) => a - b);
   let i = parseInt(nums.length / 2);
   while (i >= 0 && i < nums.length) {
+    console.log(i);
     if (nums[i] === target) return i + 1;
     i = nums[i] < target ? parseInt(i + nums.length / 2) : parseInt(i / 2);
   }
